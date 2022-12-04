@@ -1,0 +1,5 @@
+venvmpe
+*.pyc
+.env
+.DS_Store
+
