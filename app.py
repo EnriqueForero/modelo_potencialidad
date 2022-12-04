@@ -909,6 +909,8 @@ app = dash.Dash(__name__,
     external_stylesheets=[dbc.themes.BOOTSTRAP,"https://codepen.io/chriddyp/pen/bWLwgP.css"],
     external_scripts=['static/hey.js'],
     )
+server = app.server
+
 app.title="Países Potenciales"
 app.layout = html.Div(
     [
