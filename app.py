@@ -46,7 +46,7 @@ encoded_image2 = base64.b64encode(open(image_filename2, 'rb').read())
 #Cargar Bases que se necesitan
 
 #BASE PAISES POTENCIALES
-base=pd.read_csv("{}/files4/Base paises potenciales.txt".format(path),
+base=pd.read_csv("{}/files4/Base paises potenciales.zip".format(path),
     sep="|",encoding="utf-8")
 
 #Types
@@ -67,7 +67,7 @@ base=base.astype(dtype)
 
 
 #BASE PRODUCTOS POTENCIALES
-base2=pd.read_csv("{}/files3/Base prod potenciales.txt".format(path),
+base2=pd.read_csv("{}/files3/Base prod potenciales.zip".format(path),
     sep="|",encoding="utf-8",dtype={"Pais":str,"Posición":str,'Descripcion':str})
 
 #Types
