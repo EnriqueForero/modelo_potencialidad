@@ -6,18 +6,35 @@ path = os.getcwd()
 
 
 # BASE PRODUCTOS POTENCIALES
-base2 = pd.read_csv("{}/files3/Base prod potenciales.txt".format(path),
+base2 = pd.read_csv("{}/files3/Base prod potenciales.zip".format(path),
                     sep="|", encoding="utf-8", dtype={"Pais": str, "Posición": str, 'Descripcion': str})
 
+base=pd.read_csv("{}/files4/Base paises potenciales.zip".format(path),
+    sep="|",encoding="utf-8")
+
+dtype={
+    "Exportaciones Colombianas en 2021 (miles USD)":int,
+    "Valor Importaciones 2021 (miles USD)":int,
+    "PIB USD 2022":int,
+    "Exportaciones promedio 2017-2021 (miles USD)":int,
+    "Importaciones promedio 2017-2021 (miles USD)":int,
+    "Ranking LPI":int,
+    "Población 2022 (millones)":int,
+    "Promedio Desempleo (2018-2022)":float,
+    "Crecimiento PIB (2018-2022)":float,
+    "Diferencia Promedio exportaciones 2017-2021 (miles USD)":int,
+    "Diferencia Promedio importaciones 2017-2021 (miles USD)":int}
+
+base = base.astype(dtype2)
 
 # Types
 dtype2 = {
-    "Exportaciones Colombianas en 2020 (miles USD)": int,
-    "Valor Importaciones 2020 (miles USD)": int,
-    "Exportaciones promedio 2016-2020 (miles USD)": int,
-    "Importaciones promedio 2016-2020 (miles USD)": int,
-    "Diferencia Promedio exportaciones 2016-2020 (miles USD)": int,
-    "Diferencia Promedio importaciones 2016-2020 (miles USD)": int}
+    "Exportaciones Colombianas en 2021 (miles USD)": int,
+    "Valor Importaciones 2021 (miles USD)": int,
+    "Exportaciones promedio 2017-2021 (miles USD)": int,
+    "Importaciones promedio 2017-2021 (miles USD)": int,
+    "Diferencia Promedio exportaciones 2017-2021 (miles USD)": int,
+    "Diferencia Promedio importaciones 2017-2021 (miles USD)": int}
 
 base2 = base2.astype(dtype2)
 
